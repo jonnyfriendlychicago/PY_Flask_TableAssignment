@@ -1,4 +1,5 @@
 # the next two lines always need to be atop this server.py file 
+from collections import UserList
 from flask import Flask, render_template  # Import Flask to allow us to create our app
 app = Flask(__name__)    # Create a new instance of the Flask class called "app"
 # all the @ stuff below will (later) be moved into separate files.  These will be replaced with controller import lines. 
@@ -20,7 +21,36 @@ def render_lists():
         {'name' : 'Mark', 'age' : 25},
         {'name' : 'KB', 'age' : 27}
     ]
-    return render_template("index.html", displayRandomNumbers = randomNumbers, displayStudentInfoList = StudentInfoList)
+
+    userlist = [
+        {'firstName' : 'Michael', 'lastName' : 'Choi'},
+        {'firstName' : 'John', 'lastName' : 'Supsupin'},
+        {'firstName' : 'Mark', 'lastName' : 'Guillen'},
+        {'firstName' : 'KB', 'lastName' : 'Tonel'}
+        ,
+        {'firstName' : 'Michael', 'lastName' : 'Choi'},
+        {'firstName' : 'John', 'lastName' : 'Supsupin'},
+        {'firstName' : 'Mark', 'lastName' : 'Guillen'},
+        {'firstName' : 'KB', 'lastName' : 'Tonel'}
+        ,
+        {'firstName' : 'Michael', 'lastName' : 'Choi'},
+        {'firstName' : 'John', 'lastName' : 'Supsupin'},
+        {'firstName' : 'Mark', 'lastName' : 'Guillen'},
+        {'firstName' : 'KB', 'lastName' : 'Tonel'}
+        ,
+        {'firstName' : 'Michael', 'lastName' : 'Choi'},
+        {'firstName' : 'John', 'lastName' : 'Supsupin'},
+        {'firstName' : 'Mark', 'lastName' : 'Guillen'},
+        {'firstName' : 'KB', 'lastName' : 'Tonel'}
+        ,
+        {'firstName' : 'Michael', 'lastName' : 'Choi'},
+        {'firstName' : 'John', 'lastName' : 'Supsupin'},
+        {'firstName' : 'Mark', 'lastName' : 'Guillen'},
+        {'firstName' : 'KB', 'lastName' : 'Tonel'}
+    ]
+
+    # return render_template("index.html", displayRandomNumbers = randomNumbers, displayStudentInfoList = StudentInfoList, displayUserList = userlist)
+    return render_template("index.html", displayStudentInfoList = StudentInfoList, displayUserList = userlist)
 
 
 

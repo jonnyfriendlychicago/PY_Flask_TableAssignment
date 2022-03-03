@@ -15,10 +15,10 @@
     <div id="container">
 
         <div class="row001"> 
-            <h1>Random Numbers</h1>
+            <!-- <h1>Random Numbers</h1>
             {% for number in displayRandomNumbers %}
                 <p>{{ number }}</p>
-            {% endfor %}
+            {% endfor %} -->
             <h1>Students</h1>
                 <table class="studentTbl">  
                     <tr>
@@ -33,14 +33,23 @@
                     {% endfor %}    
                 </table>
 
+                <h1>Coding Dojo Titans</h1>
+                <table class="studentTbl">  
+                    <tr>
+                        <th class="studentTblHdr">First Name</th>
+                        <th class="studentTblHdr">Last Name</th>
+                        <th class="studentTblHdr">Full Name</th>
+                    </tr>
+                    {% for s in displayUserList %}
+                    <tr> 
+                        <td class="studentTblData">{{s['firstName']}}</td>
+                        <td class="studentTblData">{{s['lastName']}}</td>
+                        <td class="studentTblData">{{s['firstName']}} {{s['lastName']}}</td>
+                    </tr>
+                    {% endfor %}    
 
 
             
-        </div>
-        <div class="row001"> 
-            {% for s in displayStudentInfoList %}
-                <p>{{ s['name'] }} - {{ s['age'] }}</p>
-            {% endfor %}
         </div>
     </div>
 </body>
