@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table, Table, Table</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='/style.css')}}">
+</head>
+<body>
+    <div id=header> 
+    <h1>Let's table this topic, okay?</h1>
+    </div>
+
+    <div id="container">
+
+        <div class="row001"> 
+            <h1>Random Numbers</h1>
+            {% for number in random_numbers %}
+                <p>{{ number }}</p>
+            {% endfor %}
+            <h1>Students</h1>
+            {% for student in students %}
+                <p>{{ student['name'] }} - {{ student['age'] }}</p>
+            {% endfor %}
+        </div>
+
+    </div>
+</body>
+</html>
+
