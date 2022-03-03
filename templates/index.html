@@ -16,15 +16,32 @@
 
         <div class="row001"> 
             <h1>Random Numbers</h1>
-            {% for number in random_numbers %}
+            {% for number in displayRandomNumbers %}
                 <p>{{ number }}</p>
             {% endfor %}
             <h1>Students</h1>
-            {% for student in students %}
-                <p>{{ student['name'] }} - {{ student['age'] }}</p>
+                <table class="studentTbl">  
+                    <tr>
+                        <th class="studentTblHdr">Name</th>
+                        <th class="studentTblHdr">Age</th>
+                    </tr>
+                    {% for s in displayStudentInfoList %}
+                    <tr> 
+                        <td class="studentTblData">{{s['name']}}</td>
+                        <td class="studentTblData">{{s['age']}}</td>
+                    </tr>
+                    {% endfor %}    
+                </table>
+
+
+
+            
+        </div>
+        <div class="row001"> 
+            {% for s in displayStudentInfoList %}
+                <p>{{ s['name'] }} - {{ s['age'] }}</p>
             {% endfor %}
         </div>
-
     </div>
 </body>
 </html>

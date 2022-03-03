@@ -29,7 +29,7 @@ body {
 
 .row001 {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
 }
 
@@ -116,4 +116,27 @@ body {
     width: 75%; 
     background-color: lightcoral; 
     padding: 5px;
+}
+
+.studentTbl {
+    table-layout: auto;
+}
+.studentTblHdr, .studentTblData {
+    font-size: 15px;
+    font-family: Arial, Verdana, sans-serif;
+    
+    padding: 5px; 
+    text-align: left;
+}
+
+.studentTblHdr {
+    font-weight: bolder;
+    background-color: dimgray;
+    color: white; 
+    width: 25px;
+}
+
+.studentTblData {
+    background-color: lightgray;
+    color: black; 
 }
